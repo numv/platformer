@@ -12,10 +12,11 @@ public class Player : KinematicBody2D
 	private AnimatedSprite sprite;
 	private AnimationTree animation;
 	private AnimationNodeStateMachinePlayback playback;
-
 	private float jumpTimer = 0;
 	private const float jumpTimerMax = 0.2f;
 	private bool hasDoubleJumped = true;
+
+	private int _outOfScreenY = 300;
 
 	public override void _Ready()
 	{
@@ -23,10 +24,18 @@ public class Player : KinematicBody2D
 		animation = GetNode<AnimationTree>("AnimationPlayer/AnimationTree");
 		animation.Active = true;
 		playback = (AnimationNodeStateMachinePlayback)animation.Get("parameters/playback");
+
+		_outOfScreenY = GetParent().GetNode<Camera2D>("%PlayerCamera").LimitBottom;
 	}
 
 	public override void _PhysicsProcess(float delta)
 	{
+		if (this.Position.y > _outOfScreenY)
+		{
+			this.Position = Vector2.Zero;
+			//GetTree().ChangeScene("res://Scenes/GameOver.tscn");
+		}
+
 		var isJumpInterrupted = (Input.IsActionJustReleased("jump") && velocity.y < 0);
 		if (IsOnFloor() && jumpTimer < jumpTimerMax)
 		{
@@ -43,24 +52,20 @@ public class Player : KinematicBody2D
 		if (velocity.x != 0)
 			sprite.FlipH = velocity.x < 0;
 
-		var movement=velocity.Normalized();
+		var movement = velocity.Normalized();
 		// set animation
 		if (!IsOnFloor())
 		{
-			animation.Set("parameters/jump/blend_position",movement.y);
-			GD.Print("jump");
-			GD.Print(movement.y);
+			animation.Set("parameters/jump/blend_position", movement.y);
 			playback.Travel("jump");
 		}
 		else if (velocity.x != 0)
 		{
 			playback.Travel("walk");
-			GD.Print("walk");
 		}
 		else
 		{
 			playback.Travel("idle");
-			GD.Print("idle");
 		}
 
 		Vector2 snap = direction.y == 0 ? Vector2.Down * 20 : Vector2.Zero;
