@@ -8,11 +8,10 @@ public class Player : KinematicBody2D
 	public Vector2 speed = new Vector2(120, 360);
 
 	public Vector2 FloorNormal = Vector2.Up;
-
 	public Vector2 velocity = Vector2.Zero;
-
-
 	private AnimatedSprite sprite;
+	private AnimationTree animation;
+	private AnimationNodeStateMachinePlayback playback;
 
 	private float jumpTimer = 0;
 	private const float jumpTimerMax = 0.2f;
@@ -21,7 +20,9 @@ public class Player : KinematicBody2D
 	public override void _Ready()
 	{
 		sprite = GetNode<AnimatedSprite>("PlayerSprite");
-		sprite.Play("idle");
+		animation = GetNode<AnimationTree>("AnimationPlayer/AnimationTree");
+		animation.Active = true;
+		playback = (AnimationNodeStateMachinePlayback)animation.Get("parameters/playback");
 	}
 
 	public override void _PhysicsProcess(float delta)
@@ -42,18 +43,24 @@ public class Player : KinematicBody2D
 		if (velocity.x != 0)
 			sprite.FlipH = velocity.x < 0;
 
+		var movement=velocity.Normalized();
 		// set animation
-		if (velocity.y < 0)
+		if (!IsOnFloor())
 		{
-			sprite.Play("jumping");
+			animation.Set("parameters/jump/blend_position",movement.y);
+			GD.Print("jump");
+			GD.Print(movement.y);
+			playback.Travel("jump");
 		}
 		else if (velocity.x != 0)
 		{
-			sprite.Play("walk");
+			playback.Travel("walk");
+			GD.Print("walk");
 		}
 		else
 		{
-			sprite.Play("idle");
+			playback.Travel("idle");
+			GD.Print("idle");
 		}
 
 		Vector2 snap = direction.y == 0 ? Vector2.Down * 20 : Vector2.Zero;
