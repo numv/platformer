@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class WoodJumpUp : Node2D
+public class WoodJumpUp : StaticBody2D
 {
 	public enum EDirection
 	{
