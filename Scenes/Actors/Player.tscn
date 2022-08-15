@@ -1,127 +1,425 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=368 format=2]
 
-[ext_resource path="res://Assets/spritesheets/player-climb.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Actors/Player.cs" type="Script" id=2]
-[ext_resource path="res://Assets/spritesheets/player-jump.png" type="Texture" id=3]
-[ext_resource path="res://Assets/spritesheets/player-crouch.png" type="Texture" id=4]
-[ext_resource path="res://Assets/spritesheets/player-hurt.png" type="Texture" id=5]
-[ext_resource path="res://Assets/spritesheets/payer-run.png" type="Texture" id=6]
-[ext_resource path="res://Assets/spritesheets/player-idle.png" type="Texture" id=7]
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 1 )
-region = Rect2( 33, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 1 )
-region = Rect2( 66, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 4 )
-region = Rect2( 33, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 5 )
-region = Rect2( 33, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 7 )
-region = Rect2( 33, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 7 )
-region = Rect2( 66, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 7 )
-region = Rect2( 99, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 3 )
-region = Rect2( 33, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 6 )
-region = Rect2( 33, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 6 )
-region = Rect2( 66, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 6 )
-region = Rect2( 99, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 6 )
-region = Rect2( 132, 0, 33, 32 )
-
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 6 )
-region = Rect2( 165, 0, 33, 32 )
-
-[sub_resource type="SpriteFrames" id=9]
-animations = [ {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
-"loop": true,
-"name": "climb",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 13 ), SubResource( 14 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ) ],
-"loop": true,
-"name": "hurt",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
-"loop": true,
-"name": "idle",
-"speed": 2.0
-}, {
-"frames": [ SubResource( 21 ), SubResource( 22 ) ],
-"loop": true,
-"name": "jumping",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-} ]
 
 [sub_resource type="CapsuleShape2D" id=52]
 radius = 7.0
-height = 6.0
+height = 14.0
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=329]
+resource_name = "Attack1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "attack1" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AttackAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=330]
+resource_name = "Attack2"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "attack2" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AttackAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=331]
+resource_name = "Attack3"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "attack3" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AttackAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=382]
+resource_name = "AttackAir1"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "air-attack1" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AttackAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=391]
+resource_name = "AttackRunPunch"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "run-punch" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AttackAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=239]
+resource_name = "Crouch"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "crouch" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=240]
+resource_name = "CrouchWalk"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "crouch-walk" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=241]
+resource_name = "Fall"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "fall" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=416]
+resource_name = "GrabLedge"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "crnr-grb" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=242]
+resource_name = "Idle"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=397]
+resource_name = "IdleWeaponDrawn"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle-2" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=243]
+resource_name = "Jump"
+length = 0.3
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "jump" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=244]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("../../PlayerSprite:animation")
@@ -147,11 +445,24 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 0 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -14 ) ]
+}
 
-[sub_resource type="Animation" id=53]
-resource_name = "crouch"
-length = 0.6
+[sub_resource type="Animation" id=283]
+resource_name = "Run"
+length = 0.9
 loop = true
+step = 0.15
 tracks/0/type = "value"
 tracks/0/path = NodePath("../../PlayerSprite:animation")
 tracks/0/interp = 1
@@ -162,7 +473,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "crouch" ]
+"values": [ "run" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../../PlayerSprite:frame")
@@ -171,16 +482,17 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1 ]
+"values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[sub_resource type="Animation" id=44]
-resource_name = "falling"
-length = 0.1
+[sub_resource type="Animation" id=284]
+resource_name = "RunFast"
+length = 0.48
 loop = true
+step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("../../PlayerSprite:animation")
 tracks/0/interp = 1
@@ -191,7 +503,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "jumping" ]
+"values": [ "run2" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../../PlayerSprite:frame")
@@ -200,73 +512,141 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.08, 0.16, 0.24, 0.32, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1, 1 ]
+"values": [ 0, 1, 2, 3, 4, 5 ]
 }
 
-[sub_resource type="Animation" id=30]
-resource_name = "idel"
-loop = true
-step = 0.05
-tracks/0/type = "value"
-tracks/0/path = NodePath("../../PlayerSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../../PlayerSprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 1, 0 ]
-}
-
-[sub_resource type="Animation" id=31]
-resource_name = "jump"
-length = 0.1
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("../../PlayerSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "jumping" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../../PlayerSprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 0, 0 ]
-}
-
-[sub_resource type="Animation" id=32]
-resource_name = "walk"
+[sub_resource type="Animation" id=398]
+resource_name = "SwordDraw"
 length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "swrd-drw" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AttackAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=409]
+resource_name = "SwordSheath"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "swrd-shte" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AttackAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=420]
+resource_name = "SwordSheathWalkin"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "swrd-shte-run" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AttackAnimationFinished"
+} ]
+}
+
+[sub_resource type="Animation" id=245]
+resource_name = "Walk"
+length = 1.2
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("../../PlayerSprite:animation")
@@ -287,104 +667,1402 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0, 0.18, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=790]
+resource_name = "smrslt"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "smrslt" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 3, 5 ]
+"values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=54]
-animation = "crouch"
+[sub_resource type="AnimationNodeAnimation" id=332]
+animation = "Attack1"
 
-[sub_resource type="AnimationNodeAnimation" id=33]
-animation = "idel"
+[sub_resource type="AnimationNodeAnimation" id=333]
+animation = "Attack2"
 
-[sub_resource type="AnimationNodeAnimation" id=45]
-animation = "jump"
+[sub_resource type="AnimationNodeAnimation" id=334]
+animation = "Attack3"
 
-[sub_resource type="AnimationNodeAnimation" id=46]
-animation = "falling"
+[sub_resource type="AnimationNodeAnimation" id=383]
+animation = "AttackAir1"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=47]
-blend_point_0/node = SubResource( 45 )
-blend_point_0/pos = -0.1
-blend_point_1/node = SubResource( 46 )
-blend_point_1/pos = 0.1
+[sub_resource type="AnimationNodeAnimation" id=392]
+animation = "AttackRunPunch"
 
-[sub_resource type="AnimationNodeAnimation" id=35]
-animation = "walk"
+[sub_resource type="AnimationNodeAnimation" id=246]
+animation = "Crouch"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+[sub_resource type="AnimationNodeAnimation" id=247]
+animation = "CrouchWalk"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+[sub_resource type="AnimationNodeAnimation" id=796]
+animation = "Fall"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+[sub_resource type="AnimationNodeAnimation" id=417]
+animation = "GrabLedge"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+[sub_resource type="AnimationNodeAnimation" id=249]
+animation = "Idle"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+[sub_resource type="AnimationNodeAnimation" id=399]
+animation = "IdleWeaponDrawn"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=51]
+[sub_resource type="AnimationNodeAnimation" id=276]
+animation = "Jump"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=55]
+[sub_resource type="AnimationNodeBlendSpace1D" id=278]
+blend_point_0/node = SubResource( 276 )
+blend_point_0/pos = 0.0
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+[sub_resource type="AnimationNodeAnimation" id=285]
+animation = "Run"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+[sub_resource type="AnimationNodeAnimation" id=286]
+animation = "RunFast"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+[sub_resource type="AnimationNodeAnimation" id=791]
+animation = "smrslt"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+[sub_resource type="AnimationNodeAnimation" id=400]
+animation = "SwordDraw"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+[sub_resource type="AnimationNodeAnimation" id=410]
+animation = "SwordSheath"
+
+[sub_resource type="AnimationNodeAnimation" id=602]
+animation = "SwordSheathWalkin"
+
+[sub_resource type="AnimationNodeAnimation" id=251]
+animation = "Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=287]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=288]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=289]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=290]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=291]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=292]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=293]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=294]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=295]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=296]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=297]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=298]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=299]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=300]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=301]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=302]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=303]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=304]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=305]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=306]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=307]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=308]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=309]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=310]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=311]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=312]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=313]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=314]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=315]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=316]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=317]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=318]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=319]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=320]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=321]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=322]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=323]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=324]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=325]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=326]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=327]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=328]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=335]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=337]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=338]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=339]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=340]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=341]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=342]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=344]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=345]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=346]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=347]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=348]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=349]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=351]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=352]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=353]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=354]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=355]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=356]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=357]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=358]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=359]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=360]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=362]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=363]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=364]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=365]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=366]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=367]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=369]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=370]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=371]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=372]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=373]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=374]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=375]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=376]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=377]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=378]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=379]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=380]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=381]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=384]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=385]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=386]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=387]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=388]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=389]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=390]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=393]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=394]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=395]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=396]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=401]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=402]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=403]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=404]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=405]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=406]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=407]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=408]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=411]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=412]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=415]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=418]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=419]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=603]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=604]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=605]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=606]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=607]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=608]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=792]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=793]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=794]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=795]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=797]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=798]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=799]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=800]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=801]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=802]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=803]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=804]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=805]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=806]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=807]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=808]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=809]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=810]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=811]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=812]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=813]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=814]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=815]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=816]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=817]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=818]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=819]
 
 [sub_resource type="AnimationNodeStateMachine" id=42]
-states/crouch/node = SubResource( 54 )
-states/crouch/position = Vector2( 922, 124 )
-states/idle/node = SubResource( 33 )
-states/idle/position = Vector2( 897, 261 )
-states/jump/node = SubResource( 47 )
-states/jump/position = Vector2( 677, 333 )
-states/walk/node = SubResource( 35 )
-states/walk/position = Vector2( 1083, 321 )
-transitions = [ "idle", "walk", SubResource( 39 ), "walk", "idle", SubResource( 40 ), "idle", "jump", SubResource( 48 ), "jump", "idle", SubResource( 49 ), "jump", "walk", SubResource( 50 ), "walk", "jump", SubResource( 51 ), "walk", "crouch", SubResource( 55 ), "crouch", "walk", SubResource( 56 ), "crouch", "idle", SubResource( 57 ), "idle", "crouch", SubResource( 58 ), "crouch", "jump", SubResource( 59 ), "jump", "crouch", SubResource( 60 ) ]
-start_node = "idle"
+states/Attack1/node = SubResource( 332 )
+states/Attack1/position = Vector2( 643, -256 )
+states/Attack2/node = SubResource( 333 )
+states/Attack2/position = Vector2( 781, -128 )
+states/Attack3/node = SubResource( 334 )
+states/Attack3/position = Vector2( 922, -16 )
+states/AttackAir1/node = SubResource( 383 )
+states/AttackAir1/position = Vector2( 906, 314 )
+states/AttackRunPunch/node = SubResource( 392 )
+states/AttackRunPunch/position = Vector2( -451, 79 )
+states/Crouch/node = SubResource( 246 )
+states/Crouch/position = Vector2( 23, 86 )
+states/CrouchWalk/node = SubResource( 247 )
+states/CrouchWalk/position = Vector2( 246, 86 )
+states/Fall/node = SubResource( 796 )
+states/Fall/position = Vector2( 463, 272 )
+states/GrabLedge/node = SubResource( 417 )
+states/GrabLedge/position = Vector2( 61, 509 )
+states/Idle/node = SubResource( 249 )
+states/Idle/position = Vector2( -105, -47 )
+states/IdleWeaponDrawn/node = SubResource( 399 )
+states/IdleWeaponDrawn/position = Vector2( 246, -148 )
+states/Jump/node = SubResource( 278 )
+states/Jump/position = Vector2( 361, 440 )
+states/Run/node = SubResource( 285 )
+states/Run/position = Vector2( -209, 196 )
+states/RunFast/node = SubResource( 286 )
+states/RunFast/position = Vector2( 23, 196 )
+states/SmrSlt/node = SubResource( 791 )
+states/SmrSlt/position = Vector2( 439, 584 )
+states/SwordDraw/node = SubResource( 400 )
+states/SwordDraw/position = Vector2( 132, -247 )
+states/SwordSheath/node = SubResource( 410 )
+states/SwordSheath/position = Vector2( -232, -256 )
+states/SwordSheathWalkin/node = SubResource( 602 )
+states/SwordSheathWalkin/position = Vector2( -565, -148 )
+states/Walk/node = SubResource( 251 )
+states/Walk/position = Vector2( -202, 97 )
+transitions = [ "Idle", "Jump", SubResource( 287 ), "Idle", "Walk", SubResource( 288 ), "Idle", "Run", SubResource( 289 ), "Idle", "RunFast", SubResource( 290 ), "Idle", "Crouch", SubResource( 291 ), "Idle", "CrouchWalk", SubResource( 292 ), "Jump", "Idle", SubResource( 293 ), "Crouch", "Idle", SubResource( 294 ), "CrouchWalk", "Idle", SubResource( 295 ), "Walk", "Idle", SubResource( 296 ), "Run", "Idle", SubResource( 297 ), "RunFast", "Idle", SubResource( 298 ), "Walk", "Jump", SubResource( 299 ), "Crouch", "Jump", SubResource( 300 ), "CrouchWalk", "Jump", SubResource( 301 ), "Run", "Jump", SubResource( 302 ), "RunFast", "Jump", SubResource( 303 ), "Jump", "Walk", SubResource( 304 ), "Jump", "Crouch", SubResource( 305 ), "Jump", "CrouchWalk", SubResource( 306 ), "Jump", "RunFast", SubResource( 307 ), "Jump", "Run", SubResource( 308 ), "Walk", "Run", SubResource( 309 ), "Run", "RunFast", SubResource( 310 ), "RunFast", "Run", SubResource( 311 ), "Run", "Walk", SubResource( 312 ), "RunFast", "Walk", SubResource( 313 ), "Walk", "RunFast", SubResource( 314 ), "Walk", "Crouch", SubResource( 315 ), "Run", "Crouch", SubResource( 316 ), "RunFast", "Crouch", SubResource( 317 ), "Walk", "CrouchWalk", SubResource( 318 ), "Run", "CrouchWalk", SubResource( 319 ), "RunFast", "CrouchWalk", SubResource( 320 ), "CrouchWalk", "RunFast", SubResource( 321 ), "CrouchWalk", "Run", SubResource( 322 ), "CrouchWalk", "Walk", SubResource( 323 ), "Crouch", "Run", SubResource( 324 ), "Crouch", "Walk", SubResource( 325 ), "Crouch", "RunFast", SubResource( 326 ), "Crouch", "CrouchWalk", SubResource( 327 ), "CrouchWalk", "Crouch", SubResource( 328 ), "Idle", "Attack1", SubResource( 335 ), "Walk", "Attack1", SubResource( 337 ), "Crouch", "Attack1", SubResource( 338 ), "CrouchWalk", "Attack1", SubResource( 339 ), "Run", "Attack1", SubResource( 340 ), "RunFast", "Attack1", SubResource( 341 ), "Idle", "Attack2", SubResource( 342 ), "Walk", "Attack2", SubResource( 344 ), "Crouch", "Attack2", SubResource( 345 ), "CrouchWalk", "Attack2", SubResource( 346 ), "Run", "Attack2", SubResource( 347 ), "RunFast", "Attack2", SubResource( 348 ), "Idle", "Attack3", SubResource( 349 ), "Walk", "Attack3", SubResource( 351 ), "Crouch", "Attack3", SubResource( 352 ), "CrouchWalk", "Attack3", SubResource( 353 ), "Run", "Attack3", SubResource( 354 ), "RunFast", "Attack3", SubResource( 355 ), "Attack3", "RunFast", SubResource( 356 ), "Attack3", "Run", SubResource( 357 ), "Attack3", "CrouchWalk", SubResource( 358 ), "Attack3", "Crouch", SubResource( 359 ), "Attack3", "Walk", SubResource( 360 ), "Attack3", "Idle", SubResource( 362 ), "Attack2", "CrouchWalk", SubResource( 363 ), "Attack2", "RunFast", SubResource( 364 ), "Attack2", "Crouch", SubResource( 365 ), "Attack2", "Run", SubResource( 366 ), "Attack2", "Walk", SubResource( 367 ), "Attack2", "Idle", SubResource( 369 ), "Attack1", "Idle", SubResource( 370 ), "Attack1", "Walk", SubResource( 371 ), "Attack1", "Crouch", SubResource( 372 ), "Attack1", "CrouchWalk", SubResource( 373 ), "Attack1", "Run", SubResource( 374 ), "Attack1", "RunFast", SubResource( 375 ), "Attack1", "Attack2", SubResource( 376 ), "Attack2", "Attack3", SubResource( 377 ), "Attack3", "Attack1", SubResource( 378 ), "Attack1", "Attack3", SubResource( 379 ), "Attack3", "Attack2", SubResource( 380 ), "Attack2", "Attack1", SubResource( 381 ), "Jump", "AttackAir1", SubResource( 384 ), "AttackAir1", "Jump", SubResource( 385 ), "AttackAir1", "Run", SubResource( 386 ), "AttackAir1", "Crouch", SubResource( 387 ), "AttackAir1", "CrouchWalk", SubResource( 388 ), "AttackAir1", "Walk", SubResource( 389 ), "AttackAir1", "Idle", SubResource( 390 ), "Run", "AttackRunPunch", SubResource( 393 ), "AttackRunPunch", "Run", SubResource( 394 ), "AttackRunPunch", "Walk", SubResource( 395 ), "AttackRunPunch", "Idle", SubResource( 396 ), "Idle", "SwordDraw", SubResource( 401 ), "SwordDraw", "IdleWeaponDrawn", SubResource( 402 ), "IdleWeaponDrawn", "Attack1", SubResource( 403 ), "Attack1", "IdleWeaponDrawn", SubResource( 404 ), "IdleWeaponDrawn", "Attack2", SubResource( 405 ), "Attack2", "IdleWeaponDrawn", SubResource( 406 ), "IdleWeaponDrawn", "Attack3", SubResource( 407 ), "Attack3", "IdleWeaponDrawn", SubResource( 408 ), "IdleWeaponDrawn", "SwordSheath", SubResource( 411 ), "SwordSheath", "Idle", SubResource( 412 ), "Idle", "IdleWeaponDrawn", SubResource( 415 ), "GrabLedge", "Jump", SubResource( 418 ), "Jump", "GrabLedge", SubResource( 419 ), "SwordSheath", "SwordSheathWalkin", SubResource( 603 ), "SwordDraw", "SwordSheathWalkin", SubResource( 604 ), "SwordSheathWalkin", "Idle", SubResource( 605 ), "SwordSheathWalkin", "Walk", SubResource( 606 ), "SwordSheathWalkin", "Run", SubResource( 607 ), "SwordSheathWalkin", "RunFast", SubResource( 608 ), "SmrSlt", "Jump", SubResource( 792 ), "Jump", "SmrSlt", SubResource( 793 ), "SmrSlt", "GrabLedge", SubResource( 794 ), "GrabLedge", "SmrSlt", SubResource( 795 ), "Jump", "Fall", SubResource( 797 ), "Fall", "Idle", SubResource( 798 ), "Fall", "Walk", SubResource( 799 ), "Fall", "Run", SubResource( 800 ), "Fall", "RunFast", SubResource( 801 ), "Fall", "AttackAir1", SubResource( 802 ), "AttackAir1", "Fall", SubResource( 803 ), "Attack3", "Fall", SubResource( 804 ), "Attack2", "Fall", SubResource( 805 ), "Attack1", "Fall", SubResource( 806 ), "CrouchWalk", "Fall", SubResource( 807 ), "Crouch", "Fall", SubResource( 808 ), "RunFast", "Fall", SubResource( 809 ), "Run", "Fall", SubResource( 810 ), "Walk", "Fall", SubResource( 811 ), "AttackRunPunch", "Fall", SubResource( 812 ), "SwordSheathWalkin", "Fall", SubResource( 813 ), "IdleWeaponDrawn", "Fall", SubResource( 814 ), "Fall", "SmrSlt", SubResource( 815 ), "IdleWeaponDrawn", "SwordSheathWalkin", SubResource( 816 ), "Attack1", "SwordSheath", SubResource( 817 ), "Attack2", "SwordSheath", SubResource( 818 ), "Attack3", "SwordSheath", SubResource( 819 ) ]
+start_node = "Idle"
+end_node = "Fall"
+graph_offset = Vector2( -708, -384 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=43]
 
 [sub_resource type="RectangleShape2D" id=61]
 extents = Vector2( 8, 2 )
 
+[sub_resource type="StreamTexture" id=609]
+load_path = "res://.import/adventurer.png-f16d6a9e2e75df7875e89f810444b514.stex"
+
+[sub_resource type="AtlasTexture" id=610]
+atlas = SubResource( 609 )
+region = Rect2( 400, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=611]
+atlas = SubResource( 609 )
+region = Rect2( 450, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=612]
+atlas = SubResource( 609 )
+region = Rect2( 500, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=613]
+atlas = SubResource( 609 )
+region = Rect2( 600, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=614]
+atlas = SubResource( 609 )
+region = Rect2( 650, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=615]
+atlas = SubResource( 609 )
+region = Rect2( 0, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=616]
+atlas = SubResource( 609 )
+region = Rect2( 50, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=617]
+atlas = SubResource( 609 )
+region = Rect2( 100, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=618]
+atlas = SubResource( 609 )
+region = Rect2( 150, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=619]
+atlas = SubResource( 609 )
+region = Rect2( 200, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=620]
+atlas = SubResource( 609 )
+region = Rect2( 300, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=621]
+atlas = SubResource( 609 )
+region = Rect2( 350, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=622]
+atlas = SubResource( 609 )
+region = Rect2( 250, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=623]
+atlas = SubResource( 609 )
+region = Rect2( 0, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=624]
+atlas = SubResource( 609 )
+region = Rect2( 50, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=625]
+atlas = SubResource( 609 )
+region = Rect2( 100, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=626]
+atlas = SubResource( 609 )
+region = Rect2( 150, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=627]
+atlas = SubResource( 609 )
+region = Rect2( 200, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=628]
+atlas = SubResource( 609 )
+region = Rect2( 250, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=629]
+atlas = SubResource( 609 )
+region = Rect2( 300, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=630]
+atlas = SubResource( 609 )
+region = Rect2( 350, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=631]
+atlas = SubResource( 609 )
+region = Rect2( 400, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=632]
+atlas = SubResource( 609 )
+region = Rect2( 450, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=633]
+atlas = SubResource( 609 )
+region = Rect2( 500, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=634]
+atlas = SubResource( 609 )
+region = Rect2( 550, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=635]
+atlas = SubResource( 609 )
+region = Rect2( 600, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=636]
+atlas = SubResource( 609 )
+region = Rect2( 650, 111, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=637]
+atlas = SubResource( 609 )
+region = Rect2( 0, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=638]
+atlas = SubResource( 609 )
+region = Rect2( 50, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=639]
+atlas = SubResource( 609 )
+region = Rect2( 100, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=640]
+atlas = SubResource( 609 )
+region = Rect2( 150, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=641]
+atlas = SubResource( 609 )
+region = Rect2( 200, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=642]
+atlas = SubResource( 609 )
+region = Rect2( 250, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=643]
+atlas = SubResource( 609 )
+region = Rect2( 300, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=644]
+atlas = SubResource( 609 )
+region = Rect2( 350, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=645]
+atlas = SubResource( 609 )
+region = Rect2( 400, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=646]
+atlas = SubResource( 609 )
+region = Rect2( 250, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=647]
+atlas = SubResource( 609 )
+region = Rect2( 300, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=648]
+atlas = SubResource( 609 )
+region = Rect2( 350, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=649]
+atlas = SubResource( 609 )
+region = Rect2( 400, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=650]
+atlas = SubResource( 609 )
+region = Rect2( 450, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=651]
+atlas = SubResource( 609 )
+region = Rect2( 50, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=652]
+atlas = SubResource( 609 )
+region = Rect2( 100, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=653]
+atlas = SubResource( 609 )
+region = Rect2( 150, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=654]
+atlas = SubResource( 609 )
+region = Rect2( 200, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=655]
+atlas = SubResource( 609 )
+region = Rect2( 450, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=656]
+atlas = SubResource( 609 )
+region = Rect2( 500, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=657]
+atlas = SubResource( 609 )
+region = Rect2( 200, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=658]
+atlas = SubResource( 609 )
+region = Rect2( 250, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=659]
+atlas = SubResource( 609 )
+region = Rect2( 300, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=660]
+atlas = SubResource( 609 )
+region = Rect2( 350, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=661]
+atlas = SubResource( 609 )
+region = Rect2( 350, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=662]
+atlas = SubResource( 609 )
+region = Rect2( 400, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=663]
+atlas = SubResource( 609 )
+region = Rect2( 450, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=664]
+atlas = SubResource( 609 )
+region = Rect2( 500, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=665]
+atlas = SubResource( 609 )
+region = Rect2( 550, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=666]
+atlas = SubResource( 609 )
+region = Rect2( 600, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=667]
+atlas = SubResource( 609 )
+region = Rect2( 300, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=668]
+atlas = SubResource( 609 )
+region = Rect2( 350, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=669]
+atlas = SubResource( 609 )
+region = Rect2( 400, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=670]
+atlas = SubResource( 609 )
+region = Rect2( 450, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=671]
+atlas = SubResource( 609 )
+region = Rect2( 500, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=672]
+atlas = SubResource( 609 )
+region = Rect2( 550, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=673]
+atlas = SubResource( 609 )
+region = Rect2( 550, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=674]
+atlas = SubResource( 609 )
+region = Rect2( 600, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=675]
+atlas = SubResource( 609 )
+region = Rect2( 650, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=676]
+atlas = SubResource( 609 )
+region = Rect2( 0, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=677]
+atlas = SubResource( 609 )
+region = Rect2( 400, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=678]
+atlas = SubResource( 609 )
+region = Rect2( 450, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=679]
+atlas = SubResource( 609 )
+region = Rect2( 400, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=680]
+atlas = SubResource( 609 )
+region = Rect2( 450, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=681]
+atlas = SubResource( 609 )
+region = Rect2( 500, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=682]
+atlas = SubResource( 609 )
+region = Rect2( 550, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=683]
+atlas = SubResource( 609 )
+region = Rect2( 600, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=684]
+atlas = SubResource( 609 )
+region = Rect2( 650, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=685]
+atlas = SubResource( 609 )
+region = Rect2( 0, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=686]
+atlas = SubResource( 609 )
+region = Rect2( 150, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=687]
+atlas = SubResource( 609 )
+region = Rect2( 200, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=688]
+atlas = SubResource( 609 )
+region = Rect2( 250, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=689]
+atlas = SubResource( 609 )
+region = Rect2( 0, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=690]
+atlas = SubResource( 609 )
+region = Rect2( 50, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=691]
+atlas = SubResource( 609 )
+region = Rect2( 100, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=692]
+atlas = SubResource( 609 )
+region = Rect2( 150, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=693]
+atlas = SubResource( 609 )
+region = Rect2( 500, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=694]
+atlas = SubResource( 609 )
+region = Rect2( 550, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=695]
+atlas = SubResource( 609 )
+region = Rect2( 600, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=696]
+atlas = SubResource( 609 )
+region = Rect2( 650, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=697]
+atlas = SubResource( 609 )
+region = Rect2( 450, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=698]
+atlas = SubResource( 609 )
+region = Rect2( 500, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=699]
+atlas = SubResource( 609 )
+region = Rect2( 550, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=700]
+atlas = SubResource( 609 )
+region = Rect2( 0, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=701]
+atlas = SubResource( 609 )
+region = Rect2( 50, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=702]
+atlas = SubResource( 609 )
+region = Rect2( 100, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=703]
+atlas = SubResource( 609 )
+region = Rect2( 150, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=704]
+atlas = SubResource( 609 )
+region = Rect2( 150, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=705]
+atlas = SubResource( 609 )
+region = Rect2( 200, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=706]
+atlas = SubResource( 609 )
+region = Rect2( 250, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=707]
+atlas = SubResource( 609 )
+region = Rect2( 300, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=708]
+atlas = SubResource( 609 )
+region = Rect2( 350, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=709]
+atlas = SubResource( 609 )
+region = Rect2( 400, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=710]
+atlas = SubResource( 609 )
+region = Rect2( 450, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=711]
+atlas = SubResource( 609 )
+region = Rect2( 500, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=712]
+atlas = SubResource( 609 )
+region = Rect2( 50, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=713]
+atlas = SubResource( 609 )
+region = Rect2( 100, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=714]
+atlas = SubResource( 609 )
+region = Rect2( 150, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=715]
+atlas = SubResource( 609 )
+region = Rect2( 200, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=716]
+atlas = SubResource( 609 )
+region = Rect2( 250, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=717]
+atlas = SubResource( 609 )
+region = Rect2( 300, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=718]
+atlas = SubResource( 609 )
+region = Rect2( 350, 370, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=719]
+atlas = SubResource( 609 )
+region = Rect2( 650, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=720]
+atlas = SubResource( 609 )
+region = Rect2( 0, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=721]
+atlas = SubResource( 609 )
+region = Rect2( 50, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=722]
+atlas = SubResource( 609 )
+region = Rect2( 100, 222, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=723]
+atlas = SubResource( 609 )
+region = Rect2( 550, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=724]
+atlas = SubResource( 609 )
+region = Rect2( 600, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=725]
+atlas = SubResource( 609 )
+region = Rect2( 650, 259, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=726]
+atlas = SubResource( 609 )
+region = Rect2( 0, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=727]
+atlas = SubResource( 609 )
+region = Rect2( 50, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=728]
+atlas = SubResource( 609 )
+region = Rect2( 100, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=729]
+atlas = SubResource( 609 )
+region = Rect2( 150, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=730]
+atlas = SubResource( 609 )
+region = Rect2( 200, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=731]
+atlas = SubResource( 609 )
+region = Rect2( 250, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=732]
+atlas = SubResource( 609 )
+region = Rect2( 300, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=733]
+atlas = SubResource( 609 )
+region = Rect2( 350, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=734]
+atlas = SubResource( 609 )
+region = Rect2( 400, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=735]
+atlas = SubResource( 609 )
+region = Rect2( 450, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=736]
+atlas = SubResource( 609 )
+region = Rect2( 400, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=737]
+atlas = SubResource( 609 )
+region = Rect2( 450, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=738]
+atlas = SubResource( 609 )
+region = Rect2( 500, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=739]
+atlas = SubResource( 609 )
+region = Rect2( 550, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=740]
+atlas = SubResource( 609 )
+region = Rect2( 600, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=741]
+atlas = SubResource( 609 )
+region = Rect2( 650, 0, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=742]
+atlas = SubResource( 609 )
+region = Rect2( 500, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=743]
+atlas = SubResource( 609 )
+region = Rect2( 550, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=744]
+atlas = SubResource( 609 )
+region = Rect2( 600, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=745]
+atlas = SubResource( 609 )
+region = Rect2( 650, 296, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=746]
+atlas = SubResource( 609 )
+region = Rect2( 0, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=747]
+atlas = SubResource( 609 )
+region = Rect2( 50, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=748]
+atlas = SubResource( 609 )
+region = Rect2( 100, 333, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=749]
+atlas = SubResource( 609 )
+region = Rect2( 650, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=750]
+atlas = SubResource( 609 )
+region = Rect2( 0, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=751]
+atlas = SubResource( 609 )
+region = Rect2( 50, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=752]
+atlas = SubResource( 609 )
+region = Rect2( 100, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=753]
+atlas = SubResource( 609 )
+region = Rect2( 150, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=754]
+atlas = SubResource( 609 )
+region = Rect2( 200, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=755]
+atlas = SubResource( 609 )
+region = Rect2( 500, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=756]
+atlas = SubResource( 609 )
+region = Rect2( 550, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=757]
+atlas = SubResource( 609 )
+region = Rect2( 200, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=758]
+atlas = SubResource( 609 )
+region = Rect2( 250, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=759]
+atlas = SubResource( 609 )
+region = Rect2( 300, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=760]
+atlas = SubResource( 609 )
+region = Rect2( 350, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=761]
+atlas = SubResource( 609 )
+region = Rect2( 600, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=762]
+atlas = SubResource( 609 )
+region = Rect2( 650, 37, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=763]
+atlas = SubResource( 609 )
+region = Rect2( 0, 74, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=764]
+atlas = SubResource( 609 )
+region = Rect2( 600, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=765]
+atlas = SubResource( 609 )
+region = Rect2( 650, 148, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=766]
+atlas = SubResource( 609 )
+region = Rect2( 0, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=767]
+atlas = SubResource( 609 )
+region = Rect2( 50, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=768]
+atlas = SubResource( 609 )
+region = Rect2( 100, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=769]
+atlas = SubResource( 609 )
+region = Rect2( 150, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=770]
+atlas = SubResource( 609 )
+region = Rect2( 200, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=771]
+atlas = SubResource( 609 )
+region = Rect2( 250, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=772]
+atlas = SubResource( 609 )
+region = Rect2( 300, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=773]
+atlas = SubResource( 609 )
+region = Rect2( 350, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=774]
+atlas = SubResource( 609 )
+region = Rect2( 400, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=775]
+atlas = SubResource( 609 )
+region = Rect2( 50, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=776]
+atlas = SubResource( 609 )
+region = Rect2( 100, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=777]
+atlas = SubResource( 609 )
+region = Rect2( 150, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=778]
+atlas = SubResource( 609 )
+region = Rect2( 200, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=779]
+atlas = SubResource( 609 )
+region = Rect2( 250, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=780]
+atlas = SubResource( 609 )
+region = Rect2( 300, 407, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=781]
+atlas = SubResource( 609 )
+region = Rect2( 250, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=782]
+atlas = SubResource( 609 )
+region = Rect2( 300, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=783]
+atlas = SubResource( 609 )
+region = Rect2( 350, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=784]
+atlas = SubResource( 609 )
+region = Rect2( 400, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=785]
+atlas = SubResource( 609 )
+region = Rect2( 450, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=786]
+atlas = SubResource( 609 )
+region = Rect2( 500, 444, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=787]
+atlas = SubResource( 609 )
+region = Rect2( 550, 185, 50, 37 )
+
+[sub_resource type="AtlasTexture" id=788]
+atlas = SubResource( 609 )
+region = Rect2( 600, 185, 50, 37 )
+
+[sub_resource type="SpriteFrames" id=789]
+animations = [ {
+"frames": [ SubResource( 610 ), SubResource( 611 ), SubResource( 612 ) ],
+"loop": true,
+"name": "air-attack-3-end",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 613 ), SubResource( 614 ), SubResource( 615 ), SubResource( 616 ) ],
+"loop": true,
+"name": "air-attack1",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 617 ), SubResource( 618 ), SubResource( 619 ) ],
+"loop": true,
+"name": "air-attack2",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 620 ), SubResource( 621 ) ],
+"loop": true,
+"name": "air-attack3-loop",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 622 ) ],
+"loop": true,
+"name": "air-attack3-rdy",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 623 ), SubResource( 624 ), SubResource( 625 ), SubResource( 626 ), SubResource( 627 ) ],
+"loop": true,
+"name": "attack1",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 628 ), SubResource( 629 ), SubResource( 630 ), SubResource( 631 ), SubResource( 632 ), SubResource( 633 ) ],
+"loop": true,
+"name": "attack2",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 634 ), SubResource( 635 ), SubResource( 636 ), SubResource( 637 ), SubResource( 638 ), SubResource( 639 ) ],
+"loop": true,
+"name": "attack3",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 640 ), SubResource( 641 ), SubResource( 642 ), SubResource( 643 ) ],
+"loop": true,
+"name": "cast",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 644 ), SubResource( 645 ), SubResource( 644 ), SubResource( 645 ) ],
+"loop": true,
+"name": "cast-loop",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 646 ), SubResource( 647 ), SubResource( 648 ), SubResource( 649 ), SubResource( 650 ) ],
+"loop": true,
+"name": "crnr-clmb",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 651 ), SubResource( 652 ), SubResource( 653 ), SubResource( 654 ) ],
+"loop": true,
+"name": "crnr-grb",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 655 ), SubResource( 656 ) ],
+"loop": true,
+"name": "crnr-jmp",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 657 ), SubResource( 658 ), SubResource( 659 ), SubResource( 660 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 661 ), SubResource( 662 ), SubResource( 663 ), SubResource( 664 ), SubResource( 665 ), SubResource( 666 ) ],
+"loop": true,
+"name": "crouch-walk",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 667 ), SubResource( 668 ), SubResource( 669 ), SubResource( 670 ), SubResource( 671 ), SubResource( 672 ), SubResource( 671 ) ],
+"loop": true,
+"name": "die",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 673 ), SubResource( 674 ), SubResource( 675 ), SubResource( 676 ) ],
+"loop": true,
+"name": "drop-kick",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 677 ), SubResource( 678 ) ],
+"loop": true,
+"name": "fall",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 679 ), SubResource( 680 ), SubResource( 681 ), SubResource( 682 ), SubResource( 683 ), SubResource( 684 ), SubResource( 685 ) ],
+"loop": true,
+"name": "get-up",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 686 ), SubResource( 687 ), SubResource( 688 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 689 ), SubResource( 690 ), SubResource( 691 ), SubResource( 692 ) ],
+"loop": true,
+"name": "idle",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 693 ), SubResource( 694 ), SubResource( 695 ), SubResource( 696 ) ],
+"loop": true,
+"name": "idle-2",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 697 ), SubResource( 698 ), SubResource( 699 ) ],
+"loop": true,
+"name": "items",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 700 ), SubResource( 701 ), SubResource( 702 ), SubResource( 703 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 704 ), SubResource( 705 ), SubResource( 706 ), SubResource( 707 ), SubResource( 708 ), SubResource( 709 ), SubResource( 710 ), SubResource( 711 ) ],
+"loop": true,
+"name": "kick",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 712 ), SubResource( 713 ), SubResource( 714 ), SubResource( 715 ), SubResource( 716 ), SubResource( 717 ), SubResource( 718 ) ],
+"loop": true,
+"name": "knock-dwn",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 719 ), SubResource( 720 ), SubResource( 721 ), SubResource( 722 ) ],
+"loop": true,
+"name": "ladder-climb",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 723 ), SubResource( 724 ), SubResource( 725 ), SubResource( 726 ), SubResource( 727 ), SubResource( 728 ), SubResource( 729 ), SubResource( 730 ), SubResource( 731 ), SubResource( 732 ), SubResource( 733 ), SubResource( 734 ), SubResource( 735 ) ],
+"loop": true,
+"name": "punch",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 736 ), SubResource( 737 ), SubResource( 738 ), SubResource( 739 ), SubResource( 740 ), SubResource( 741 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 742 ), SubResource( 743 ), SubResource( 744 ), SubResource( 745 ), SubResource( 746 ), SubResource( 747 ), SubResource( 748 ) ],
+"loop": true,
+"name": "run-punch",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 749 ), SubResource( 750 ), SubResource( 751 ), SubResource( 752 ), SubResource( 753 ), SubResource( 754 ) ],
+"loop": true,
+"name": "run2",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 755 ), SubResource( 756 ) ],
+"loop": true,
+"name": "slide",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 757 ), SubResource( 758 ), SubResource( 759 ), SubResource( 760 ) ],
+"loop": true,
+"name": "smrslt",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 761 ), SubResource( 762 ), SubResource( 763 ) ],
+"loop": true,
+"name": "stand",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 764 ), SubResource( 765 ), SubResource( 766 ), SubResource( 767 ) ],
+"loop": true,
+"name": "swrd-drw",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 767 ), SubResource( 768 ), SubResource( 769 ), SubResource( 770 ) ],
+"loop": true,
+"name": "swrd-shte",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 771 ), SubResource( 772 ), SubResource( 773 ), SubResource( 774 ) ],
+"loop": true,
+"name": "swrd-shte-run",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 775 ), SubResource( 776 ), SubResource( 777 ), SubResource( 778 ), SubResource( 779 ), SubResource( 780 ) ],
+"loop": true,
+"name": "walk",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 781 ), SubResource( 782 ), SubResource( 783 ), SubResource( 784 ), SubResource( 785 ), SubResource( 786 ) ],
+"loop": true,
+"name": "wall-run",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 787 ), SubResource( 788 ) ],
+"loop": true,
+"name": "wall-slide",
+"speed": 10.0
+} ]
+
 [node name="Player" type="KinematicBody2D"]
-collision_layer = 3
-collision_mask = 5
+collision_mask = 7
 script = ExtResource( 2 )
 
-[node name="PlayerSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -16 )
-frames = SubResource( 9 )
-animation = "idle"
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -10 )
+position = Vector2( 0, -14 )
 shape = SubResource( 52 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("AnimationTree")
-anims/RESET = SubResource( 29 )
-anims/crouch = SubResource( 53 )
-anims/falling = SubResource( 44 )
-anims/idel = SubResource( 30 )
-anims/jump = SubResource( 31 )
-anims/walk = SubResource( 32 )
+anims/Attack1 = SubResource( 329 )
+anims/Attack2 = SubResource( 330 )
+anims/Attack3 = SubResource( 331 )
+anims/AttackAir1 = SubResource( 382 )
+anims/AttackRunPunch = SubResource( 391 )
+anims/Crouch = SubResource( 239 )
+anims/CrouchWalk = SubResource( 240 )
+anims/Fall = SubResource( 241 )
+anims/GrabLedge = SubResource( 416 )
+anims/Idle = SubResource( 242 )
+anims/IdleWeaponDrawn = SubResource( 397 )
+anims/Jump = SubResource( 243 )
+anims/RESET = SubResource( 244 )
+anims/Run = SubResource( 283 )
+anims/RunFast = SubResource( 284 )
+anims/SwordDraw = SubResource( 398 )
+anims/SwordSheath = SubResource( 409 )
+anims/SwordSheathWalkin = SubResource( 420 )
+anims/Walk = SubResource( 245 )
+anims/smrslt = SubResource( 790 )
 
 [node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
 tree_root = SubResource( 42 )
 anim_player = NodePath("..")
-active = true
 process_mode = 0
 parameters/playback = SubResource( 43 )
-parameters/jump/blend_position = 0.17558
+parameters/Jump/blend_position = 0.0988531
 
 [node name="AreaPlatformDrop" type="Area2D" parent="."]
 collision_layer = 0
@@ -393,5 +2071,21 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPlatformDrop"]
 position = Vector2( 0, -2 )
 shape = SubResource( 61 )
+
+[node name="RayCastLedge" type="RayCast2D" parent="."]
+position = Vector2( 0, -32 )
+cast_to = Vector2( 9, 0 )
+
+[node name="RayCastLedgeWall" type="RayCast2D" parent="."]
+position = Vector2( 0, -30 )
+cast_to = Vector2( 9, 0 )
+
+[node name="PlayerSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -17 )
+frames = SubResource( 789 )
+animation = "idle"
+__meta__ = {
+"_editor_description_": "YXNlcHJpdGVfd2l6YXJkX2NvbmZpZwpzb3VyY2V8PXJlczovL0Fzc2V0c1YyL3Nwcml0ZXNoZWV0cy9hZHZlbnR1cmVyLmFzZXByaXRlCmxheWVyfD0Kb3BfZXhwfD1GYWxzZQpvX2ZvbGRlcnw9cmVzOi8vQXNzZXRzVjIvc3ByaXRlc2hlZXRzCm9fbmFtZXw9Cm9ubHlfdmlzaWJsZXw9VHJ1ZQpvX2V4X3B8PQo="
+}
 
 [connection signal="body_exited" from="AreaPlatformDrop" to="." method="OnAreaPlatformDropBodyExited"]

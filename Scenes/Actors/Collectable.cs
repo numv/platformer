@@ -34,7 +34,7 @@ public class Collectable : Node2D
         
         
         var label = GetParent().GetNode<Label>("%LabelCherry");
-        p.PlaySound(Player.ESounds.CoinPickup);
+        p.PlaySoundEffect(Player.ESounds.CoinPickup);
         var counter = (int)label.GetMeta("counter", 0);
         var counterMax = (int?)label.GetMeta("counterMax", default(int?));
         counter++;
