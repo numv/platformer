@@ -76,12 +76,12 @@ public class Player : KinematicBody2D
         CrouchWalk,
         GrabLedge,
 
-        AttackRunPunch,
         
         SwordSheath,
         SwordSheathWalkin,
         
         AttackAir1,
+        AttackRunPunch,
         
         // locked movement
         SwordDraw,
@@ -192,7 +192,6 @@ public class Player : KinematicBody2D
         ref Vector2 velocity,
         ref EAnimation? forceAnimation)
     {
-
         if (forceAnimation >= EAnimation.SwordDraw)
         {
             // stuck in attack animation
@@ -224,11 +223,12 @@ public class Player : KinematicBody2D
         
         if (IsOnFloor() && Input.IsActionPressed("attack"))
         {
+            GD.Print(Math.Abs(velocity.x), " runspeed:", speedRunningFast.x);
             if (Math.Abs(velocity.x) >= speedRunningFast.x)
             {
                 PlaySoundEffect(ESounds.PunchHeavy);
                 forceAnimation = EAnimation.AttackRunPunch;
-                _speed.x = speedXStart;
+                _speed.x = speedXStart*2;
             }
             else
             {
@@ -251,13 +251,12 @@ public class Player : KinematicBody2D
             }
             return true;
         }
-        
         if (Input.IsActionJustPressed("attack") && forceAnimation != EAnimation.AttackAir1)
         {
             PlaySoundEffect(ESounds.WeaponSwingAir);
             forceAnimation = EAnimation.AttackAir1;
             _hasDoubleJumped = true;
-            _isSwordDrawn = true;
+            //_isSwordDrawn = true;
             return true;
         }
         
@@ -267,6 +266,7 @@ public class Player : KinematicBody2D
             if (!_isSwordDrawn)
             {
                 forceAnimation = EAnimation.SwordDraw;
+                GD.Print("force draw");
             }
             else
             {

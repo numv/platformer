@@ -1,4 +1,4 @@
-[gd_scene load_steps=368 format=2]
+[gd_scene load_steps=301 format=2]
 
 [ext_resource path="res://Scenes/Actors/Player.cs" type="Script" id=2]
 
@@ -763,254 +763,10 @@ animation = "SwordSheathWalkin"
 [sub_resource type="AnimationNodeAnimation" id=251]
 animation = "Walk"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=287]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=288]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=289]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=290]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=291]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=292]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=293]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=294]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=295]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=296]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=297]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=298]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=299]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=300]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=301]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=302]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=303]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=304]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=305]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=306]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=307]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=308]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=309]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=310]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=311]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=312]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=313]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=314]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=315]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=316]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=317]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=318]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=319]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=320]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=321]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=322]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=323]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=324]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=325]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=326]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=327]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=328]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=335]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=337]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=338]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=339]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=340]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=341]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=342]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=344]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=345]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=346]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=347]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=348]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=349]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=351]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=352]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=353]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=354]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=355]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=356]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=357]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=358]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=359]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=360]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=362]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=363]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=364]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=365]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=366]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=367]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=369]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=370]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=371]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=372]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=373]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=374]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=375]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=376]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=377]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=378]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=379]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=380]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=381]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=384]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=385]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=386]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=387]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=388]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=389]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=390]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=393]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=394]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=395]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=396]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=401]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=402]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=403]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=404]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=405]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=406]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=407]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=408]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=411]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=412]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=415]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=418]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=419]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=603]
-switch_mode = 1
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=604]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=605]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=606]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=607]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=608]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=792]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=793]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=794]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=795]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=797]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=798]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=799]
 
@@ -1041,7 +797,6 @@ auto_advance = true
 [sub_resource type="AnimationNodeStateMachineTransition" id=812]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=813]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=814]
 
@@ -1052,52 +807,168 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=817]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=818]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=819]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=822]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=823]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=824]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=825]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=826]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=827]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=828]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=829]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=830]
+priority = 5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=831]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=832]
+priority = 5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=833]
+priority = 5
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=834]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=835]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=836]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=837]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=838]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=839]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=840]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=841]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=842]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=843]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=844]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=845]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=846]
+xfade_time = 55.0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=847]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=848]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=849]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=850]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=851]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=852]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=853]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=854]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=855]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=856]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=857]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=858]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=859]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=860]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=861]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=862]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=863]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=864]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=865]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=866]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=867]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=868]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=869]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=870]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=874]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=875]
+switch_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id=42]
 states/Attack1/node = SubResource( 332 )
-states/Attack1/position = Vector2( 643, -256 )
+states/Attack1/position = Vector2( 634, -41 )
 states/Attack2/node = SubResource( 333 )
-states/Attack2/position = Vector2( 781, -128 )
+states/Attack2/position = Vector2( 611, 13 )
 states/Attack3/node = SubResource( 334 )
-states/Attack3/position = Vector2( 922, -16 )
+states/Attack3/position = Vector2( 611, 82 )
 states/AttackAir1/node = SubResource( 383 )
-states/AttackAir1/position = Vector2( 906, 314 )
+states/AttackAir1/position = Vector2( 667, 386 )
 states/AttackRunPunch/node = SubResource( 392 )
-states/AttackRunPunch/position = Vector2( -451, 79 )
+states/AttackRunPunch/position = Vector2( 125, -102 )
 states/Crouch/node = SubResource( 246 )
-states/Crouch/position = Vector2( 23, 86 )
+states/Crouch/position = Vector2( -48, 159 )
 states/CrouchWalk/node = SubResource( 247 )
-states/CrouchWalk/position = Vector2( 246, 86 )
+states/CrouchWalk/position = Vector2( 142, 182 )
 states/Fall/node = SubResource( 796 )
-states/Fall/position = Vector2( 463, 272 )
+states/Fall/position = Vector2( 479, 326 )
 states/GrabLedge/node = SubResource( 417 )
-states/GrabLedge/position = Vector2( 61, 509 )
+states/GrabLedge/position = Vector2( 3, 356 )
 states/Idle/node = SubResource( 249 )
-states/Idle/position = Vector2( -105, -47 )
+states/Idle/position = Vector2( 137, 50 )
 states/IdleWeaponDrawn/node = SubResource( 399 )
-states/IdleWeaponDrawn/position = Vector2( 246, -148 )
+states/IdleWeaponDrawn/position = Vector2( 1033, -164 )
 states/Jump/node = SubResource( 278 )
-states/Jump/position = Vector2( 361, 440 )
+states/Jump/position = Vector2( 226, 386 )
 states/Run/node = SubResource( 285 )
-states/Run/position = Vector2( -209, 196 )
+states/Run/position = Vector2( 370, 182 )
 states/RunFast/node = SubResource( 286 )
-states/RunFast/position = Vector2( 23, 196 )
+states/RunFast/position = Vector2( 407, -15 )
 states/SmrSlt/node = SubResource( 791 )
-states/SmrSlt/position = Vector2( 439, 584 )
+states/SmrSlt/position = Vector2( 95, 298 )
 states/SwordDraw/node = SubResource( 400 )
-states/SwordDraw/position = Vector2( 132, -247 )
+states/SwordDraw/position = Vector2( 429, -200 )
 states/SwordSheath/node = SubResource( 410 )
-states/SwordSheath/position = Vector2( -232, -256 )
+states/SwordSheath/position = Vector2( 595, -282 )
 states/SwordSheathWalkin/node = SubResource( 602 )
-states/SwordSheathWalkin/position = Vector2( -565, -148 )
+states/SwordSheathWalkin/position = Vector2( 259, -257 )
 states/Walk/node = SubResource( 251 )
-states/Walk/position = Vector2( -202, 97 )
-transitions = [ "Idle", "Jump", SubResource( 287 ), "Idle", "Walk", SubResource( 288 ), "Idle", "Run", SubResource( 289 ), "Idle", "RunFast", SubResource( 290 ), "Idle", "Crouch", SubResource( 291 ), "Idle", "CrouchWalk", SubResource( 292 ), "Jump", "Idle", SubResource( 293 ), "Crouch", "Idle", SubResource( 294 ), "CrouchWalk", "Idle", SubResource( 295 ), "Walk", "Idle", SubResource( 296 ), "Run", "Idle", SubResource( 297 ), "RunFast", "Idle", SubResource( 298 ), "Walk", "Jump", SubResource( 299 ), "Crouch", "Jump", SubResource( 300 ), "CrouchWalk", "Jump", SubResource( 301 ), "Run", "Jump", SubResource( 302 ), "RunFast", "Jump", SubResource( 303 ), "Jump", "Walk", SubResource( 304 ), "Jump", "Crouch", SubResource( 305 ), "Jump", "CrouchWalk", SubResource( 306 ), "Jump", "RunFast", SubResource( 307 ), "Jump", "Run", SubResource( 308 ), "Walk", "Run", SubResource( 309 ), "Run", "RunFast", SubResource( 310 ), "RunFast", "Run", SubResource( 311 ), "Run", "Walk", SubResource( 312 ), "RunFast", "Walk", SubResource( 313 ), "Walk", "RunFast", SubResource( 314 ), "Walk", "Crouch", SubResource( 315 ), "Run", "Crouch", SubResource( 316 ), "RunFast", "Crouch", SubResource( 317 ), "Walk", "CrouchWalk", SubResource( 318 ), "Run", "CrouchWalk", SubResource( 319 ), "RunFast", "CrouchWalk", SubResource( 320 ), "CrouchWalk", "RunFast", SubResource( 321 ), "CrouchWalk", "Run", SubResource( 322 ), "CrouchWalk", "Walk", SubResource( 323 ), "Crouch", "Run", SubResource( 324 ), "Crouch", "Walk", SubResource( 325 ), "Crouch", "RunFast", SubResource( 326 ), "Crouch", "CrouchWalk", SubResource( 327 ), "CrouchWalk", "Crouch", SubResource( 328 ), "Idle", "Attack1", SubResource( 335 ), "Walk", "Attack1", SubResource( 337 ), "Crouch", "Attack1", SubResource( 338 ), "CrouchWalk", "Attack1", SubResource( 339 ), "Run", "Attack1", SubResource( 340 ), "RunFast", "Attack1", SubResource( 341 ), "Idle", "Attack2", SubResource( 342 ), "Walk", "Attack2", SubResource( 344 ), "Crouch", "Attack2", SubResource( 345 ), "CrouchWalk", "Attack2", SubResource( 346 ), "Run", "Attack2", SubResource( 347 ), "RunFast", "Attack2", SubResource( 348 ), "Idle", "Attack3", SubResource( 349 ), "Walk", "Attack3", SubResource( 351 ), "Crouch", "Attack3", SubResource( 352 ), "CrouchWalk", "Attack3", SubResource( 353 ), "Run", "Attack3", SubResource( 354 ), "RunFast", "Attack3", SubResource( 355 ), "Attack3", "RunFast", SubResource( 356 ), "Attack3", "Run", SubResource( 357 ), "Attack3", "CrouchWalk", SubResource( 358 ), "Attack3", "Crouch", SubResource( 359 ), "Attack3", "Walk", SubResource( 360 ), "Attack3", "Idle", SubResource( 362 ), "Attack2", "CrouchWalk", SubResource( 363 ), "Attack2", "RunFast", SubResource( 364 ), "Attack2", "Crouch", SubResource( 365 ), "Attack2", "Run", SubResource( 366 ), "Attack2", "Walk", SubResource( 367 ), "Attack2", "Idle", SubResource( 369 ), "Attack1", "Idle", SubResource( 370 ), "Attack1", "Walk", SubResource( 371 ), "Attack1", "Crouch", SubResource( 372 ), "Attack1", "CrouchWalk", SubResource( 373 ), "Attack1", "Run", SubResource( 374 ), "Attack1", "RunFast", SubResource( 375 ), "Attack1", "Attack2", SubResource( 376 ), "Attack2", "Attack3", SubResource( 377 ), "Attack3", "Attack1", SubResource( 378 ), "Attack1", "Attack3", SubResource( 379 ), "Attack3", "Attack2", SubResource( 380 ), "Attack2", "Attack1", SubResource( 381 ), "Jump", "AttackAir1", SubResource( 384 ), "AttackAir1", "Jump", SubResource( 385 ), "AttackAir1", "Run", SubResource( 386 ), "AttackAir1", "Crouch", SubResource( 387 ), "AttackAir1", "CrouchWalk", SubResource( 388 ), "AttackAir1", "Walk", SubResource( 389 ), "AttackAir1", "Idle", SubResource( 390 ), "Run", "AttackRunPunch", SubResource( 393 ), "AttackRunPunch", "Run", SubResource( 394 ), "AttackRunPunch", "Walk", SubResource( 395 ), "AttackRunPunch", "Idle", SubResource( 396 ), "Idle", "SwordDraw", SubResource( 401 ), "SwordDraw", "IdleWeaponDrawn", SubResource( 402 ), "IdleWeaponDrawn", "Attack1", SubResource( 403 ), "Attack1", "IdleWeaponDrawn", SubResource( 404 ), "IdleWeaponDrawn", "Attack2", SubResource( 405 ), "Attack2", "IdleWeaponDrawn", SubResource( 406 ), "IdleWeaponDrawn", "Attack3", SubResource( 407 ), "Attack3", "IdleWeaponDrawn", SubResource( 408 ), "IdleWeaponDrawn", "SwordSheath", SubResource( 411 ), "SwordSheath", "Idle", SubResource( 412 ), "Idle", "IdleWeaponDrawn", SubResource( 415 ), "GrabLedge", "Jump", SubResource( 418 ), "Jump", "GrabLedge", SubResource( 419 ), "SwordSheath", "SwordSheathWalkin", SubResource( 603 ), "SwordDraw", "SwordSheathWalkin", SubResource( 604 ), "SwordSheathWalkin", "Idle", SubResource( 605 ), "SwordSheathWalkin", "Walk", SubResource( 606 ), "SwordSheathWalkin", "Run", SubResource( 607 ), "SwordSheathWalkin", "RunFast", SubResource( 608 ), "SmrSlt", "Jump", SubResource( 792 ), "Jump", "SmrSlt", SubResource( 793 ), "SmrSlt", "GrabLedge", SubResource( 794 ), "GrabLedge", "SmrSlt", SubResource( 795 ), "Jump", "Fall", SubResource( 797 ), "Fall", "Idle", SubResource( 798 ), "Fall", "Walk", SubResource( 799 ), "Fall", "Run", SubResource( 800 ), "Fall", "RunFast", SubResource( 801 ), "Fall", "AttackAir1", SubResource( 802 ), "AttackAir1", "Fall", SubResource( 803 ), "Attack3", "Fall", SubResource( 804 ), "Attack2", "Fall", SubResource( 805 ), "Attack1", "Fall", SubResource( 806 ), "CrouchWalk", "Fall", SubResource( 807 ), "Crouch", "Fall", SubResource( 808 ), "RunFast", "Fall", SubResource( 809 ), "Run", "Fall", SubResource( 810 ), "Walk", "Fall", SubResource( 811 ), "AttackRunPunch", "Fall", SubResource( 812 ), "SwordSheathWalkin", "Fall", SubResource( 813 ), "IdleWeaponDrawn", "Fall", SubResource( 814 ), "Fall", "SmrSlt", SubResource( 815 ), "IdleWeaponDrawn", "SwordSheathWalkin", SubResource( 816 ), "Attack1", "SwordSheath", SubResource( 817 ), "Attack2", "SwordSheath", SubResource( 818 ), "Attack3", "SwordSheath", SubResource( 819 ) ]
+states/Walk/position = Vector2( 295, 94 )
+transitions = [ "Jump", "GrabLedge", SubResource( 797 ), "Jump", "Fall", SubResource( 798 ), "Fall", "SmrSlt", SubResource( 799 ), "Jump", "SmrSlt", SubResource( 800 ), "GrabLedge", "SmrSlt", SubResource( 801 ), "Idle", "Crouch", SubResource( 802 ), "Idle", "Walk", SubResource( 803 ), "Walk", "Run", SubResource( 804 ), "Run", "CrouchWalk", SubResource( 805 ), "Run", "RunFast", SubResource( 806 ), "RunFast", "CrouchWalk", SubResource( 807 ), "RunFast", "Idle", SubResource( 808 ), "CrouchWalk", "Idle", SubResource( 809 ), "Run", "Idle", SubResource( 810 ), "Walk", "Idle", SubResource( 811 ), "CrouchWalk", "Crouch", SubResource( 812 ), "IdleWeaponDrawn", "Attack1", SubResource( 813 ), "IdleWeaponDrawn", "Attack2", SubResource( 814 ), "IdleWeaponDrawn", "Attack3", SubResource( 815 ), "IdleWeaponDrawn", "AttackAir1", SubResource( 816 ), "Idle", "SwordDraw", SubResource( 817 ), "SwordDraw", "IdleWeaponDrawn", SubResource( 818 ), "IdleWeaponDrawn", "SwordSheath", SubResource( 819 ), "Attack1", "IdleWeaponDrawn", SubResource( 822 ), "Attack2", "IdleWeaponDrawn", SubResource( 823 ), "Attack3", "IdleWeaponDrawn", SubResource( 824 ), "AttackAir1", "IdleWeaponDrawn", SubResource( 825 ), "AttackAir1", "Fall", SubResource( 826 ), "AttackAir1", "SmrSlt", SubResource( 827 ), "SmrSlt", "AttackAir1", SubResource( 828 ), "Fall", "AttackAir1", SubResource( 829 ), "Idle", "Attack1", SubResource( 830 ), "RunFast", "AttackRunPunch", SubResource( 831 ), "Idle", "Attack2", SubResource( 832 ), "Idle", "Attack3", SubResource( 833 ), "Walk", "Attack1", SubResource( 834 ), "Walk", "Attack2", SubResource( 835 ), "Walk", "Attack3", SubResource( 836 ), "Run", "Attack1", SubResource( 837 ), "Run", "Attack2", SubResource( 838 ), "Run", "Attack3", SubResource( 839 ), "RunFast", "Attack1", SubResource( 840 ), "RunFast", "Attack2", SubResource( 841 ), "RunFast", "Attack3", SubResource( 842 ), "SwordSheathWalkin", "Walk", SubResource( 843 ), "IdleWeaponDrawn", "SwordSheathWalkin", SubResource( 844 ), "SwordSheath", "Idle", SubResource( 845 ), "SwordSheath", "SwordSheathWalkin", SubResource( 846 ), "Fall", "Walk", SubResource( 847 ), "Fall", "Idle", SubResource( 848 ), "Fall", "IdleWeaponDrawn", SubResource( 849 ), "SmrSlt", "Walk", SubResource( 850 ), "SmrSlt", "Idle", SubResource( 851 ), "SmrSlt", "IdleWeaponDrawn", SubResource( 852 ), "SmrSlt", "GrabLedge", SubResource( 853 ), "Walk", "Fall", SubResource( 854 ), "Run", "Fall", SubResource( 855 ), "CrouchWalk", "Fall", SubResource( 856 ), "RunFast", "Fall", SubResource( 857 ), "SwordSheathWalkin", "Attack1", SubResource( 858 ), "SwordSheathWalkin", "Attack2", SubResource( 859 ), "SwordSheathWalkin", "Attack3", SubResource( 860 ), "SwordSheath", "Attack1", SubResource( 861 ), "SwordSheath", "Attack2", SubResource( 862 ), "SwordSheath", "Attack3", SubResource( 863 ), "AttackRunPunch", "Walk", SubResource( 864 ), "AttackRunPunch", "Idle", SubResource( 865 ), "Walk", "Jump", SubResource( 866 ), "Run", "Jump", SubResource( 867 ), "CrouchWalk", "Jump", SubResource( 868 ), "RunFast", "Jump", SubResource( 869 ), "Idle", "Jump", SubResource( 870 ), "AttackAir1", "SwordSheathWalkin", SubResource( 874 ), "Fall", "SwordSheathWalkin", SubResource( 875 ) ]
 start_node = "Idle"
 end_node = "Fall"
-graph_offset = Vector2( -708, -384 )
+graph_offset = Vector2( -225, -338 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=43]
 
@@ -2060,9 +1931,10 @@ anims/smrslt = SubResource( 790 )
 [node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
 tree_root = SubResource( 42 )
 anim_player = NodePath("..")
+active = true
 process_mode = 0
 parameters/playback = SubResource( 43 )
-parameters/Jump/blend_position = 0.0988531
+parameters/Jump/blend_position = -0.120699
 
 [node name="AreaPlatformDrop" type="Area2D" parent="."]
 collision_layer = 0
